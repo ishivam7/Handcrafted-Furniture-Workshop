@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Furniture Workshop Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <img src="images/logo.png" alt="Workshop Logo">
+        <h2>HF Workshop Gallery</h2>
+    </div>
+
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+
+            <li>
+                <a href="#add-furniture">Add Furniture</a>
+            </li>
+
+        </ul>
+
+    </nav>
+<button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+    ☰
+</button>
+</header>
+
+<main id="home">
+
+    <section class="hero">
+
+        <h1>Handcrafted Furniture Workshop Gallery</h1>
+
+        <p>
+            Explore premium handcrafted wooden furniture designed with
+            quality, creativity, and traditional craftsmanship.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search furniture..."
+                aria-label="Search Furniture">
+
+            <button id="searchBtn" aria-label="Search">
+                Search
+            </button>
+
+        </div>
+    <p id="searchMessage" class="search-message"></p>
+    </section>
+
+</main>
+<section id="gallery" class="gallery">
+
+    <h2>Featured Furniture</h2>
+
+    <p class="gallery-text">
+        Browse our handcrafted wooden furniture collection.
+    </p>
+
+    <div id="loading" class="loading" hidden>
+        Loading furniture...
+    </div>
+
+    <div id="noData" class="no-data" hidden>
+        No data found.
+    </div>
+
+    <div class="gallery-container" id="galleryContainer">
+
+        <article class="card furniture-card">
+            <img src="images/chairs.jpg" alt="Wooden Chair">
+
+            <div class="card-content">
+                <h3>Wooden Chair</h3>
+                <p><strong>Material:</strong> Teak Wood</p>
+                <p><strong>Price:</strong> ₹4,500</p>
+                <p><strong>Status:</strong> Available</p>
+
+                <button class="view-btn" aria-label="View Wooden Chair">
+                    View Details
+                </button>
+            </div>
+        </article>
+
+        <article class="card furniture-card">
+            <img src="images/dining.jpg" alt="Dining Table">
+
+            <div class="card-content">
+                <h3>Dining Table</h3>
+                <p><strong>Material:</strong> Sheesham Wood</p>
+                <p><strong>Price:</strong> ₹12,000</p>
+                <p><strong>Status:</strong> Available</p>
+
+                <button class="view-btn" aria-label="View Dining Table">
+                    View Details
+                </button>
+            </div>
+        </article>
+
+        <article class="card furniture-card">
+            <img src="images/sofa.jpg" alt="Wooden Sofa">
+
+            <div class="card-content">
+                <h3>Wooden Sofa</h3>
+                <p><strong>Material:</strong> Oak Wood</p>
+                <p><strong>Price:</strong> ₹18,500</p>
+                <p><strong>Status:</strong> Sold Out</p>
+
+                <button class="view-btn" aria-label="View Wooden Sofa">
+                    View Details
+                </button>
+            </div>
+        </article>
+        <article class="card furniture-card">
+            <img src="images/cabinat.jpg" alt="Storage Cabinet">
+
+            <div class="card-content">
+                <h3>Storage Cabinet</h3>
+                <p><strong>Material:</strong> Walnut Wood</p>
+                <p><strong>Price:</strong> ₹15,500</p>
+                <p><strong>Status:</strong> Available</p>
+
+                <button class="view-btn" aria-label="View Storage Cabinet">
+                    View Details
+                </button>
+            </div>
+            </article>
+            <article class="card furniture-card">
+    <img src="images/book.jpg" alt="Wooden Bookshelf">
+
+    <div class="card-content">
+        <h3>Wooden Bookshelf</h3>
+        <p><strong>Material:</strong> Oak Wood</p>
+        <p><strong>Price:</strong> ₹9,800</p>
+        <p><strong>Status:</strong> Available</p>
+
+        <button class="view-btn" aria-label="View Wooden Bookshelf">
+            View Details
+        </button>
+    </div>
+</article>
+        </article>
+<article class="card furniture-card">
+    <img src="images/bed.jpg" alt="Wooden Bed Frame">
+
+    <div class="card-content">
+        <h3>Wooden Bed Frame</h3>
+        <p><strong>Material:</strong> Sheesham Wood</p>
+        <p><strong>Price:</strong> ₹24,500</p>
+        <p><strong>Status:</strong> Available</p>
+
+        <button class="view-btn" aria-label="View Wooden Bed Frame">
+            View Details
+        </button>
+    </div>
+</article>
+    </div>
+
+</section>
+</main>  
+
+<section id="add-furniture" class="add-furniture">
+
+    <h2>Add New Furniture</h2>
+
+    <form id="furnitureForm" novalidate>
+
+        <div class="form-group">
+            <label for="furnitureName">Furniture Name</label>
+
+            <input
+                type="text"
+                id="furnitureName"
+                name="furnitureName"
+                placeholder="Enter furniture name"
+                aria-label="Furniture Name"
+                required>
+
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+
+            <input
+                type="text"
+                id="category"
+                name="category"
+                placeholder="Chair, Table, Sofa..."
+                aria-label="Furniture Category"
+                required>
+
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="material">Material</label>
+
+            <input
+                type="text"
+                id="material"
+                name="material"
+                placeholder="Teak Wood"
+                aria-label="Furniture Material"
+                required>
+
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+
+            <input
+                type="number"
+                id="price"
+                name="price"
+                placeholder="Enter price"
+                aria-label="Furniture Price"
+                required>
+
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="availability">Availability</label>
+
+            <select
+                id="availability"
+                name="availability"
+                aria-label="Furniture Availability"
+                required>
+
+                <option value="">Select Status</option>
+                <option>Available</option>
+                <option>Sold Out</option>
+
+            </select>
+
+            <small class="error-message"></small>
+        </div>
+
+        <button
+            type="submit"
+            class="submit-btn"
+            aria-label="Save Furniture">
+            Save Furniture
+        </button>
+
+    </form>
+
+</section>
+
+    <footer>
+    <p>
+        © 2026 Handcrafted Furniture Workshop Gallery. All Rights Reserved.
+    </p>
+</footer>
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
